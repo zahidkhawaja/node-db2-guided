@@ -7,6 +7,6 @@ exports.up = function(knex) {
 
 exports.down = function(knex) {
   return knex.schema.table('fruits', table => {
-    table.dropColumn()
+    table.dropColumn('color')
   })
 };
