@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "migrateup": "knex migrate:up",
+    "migratedown": "knex migrate:down",
+    "migrateall": "knex migrate:latest",
+    "migraterollback": "knex migrate:rollback"
   },
   "repository": {
     "type": "git",
