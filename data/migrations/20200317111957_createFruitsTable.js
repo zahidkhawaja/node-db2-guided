@@ -5,7 +5,10 @@ exports.up = function(knex) {
     table.increments()
     // make a "name" column of type text (128) unique not null
     table.text('name', 128).unique().notNullable()
-    // make a "avgWeightOz" of type decimal not null
+    // make a "avgWeightOz" of type decimal/float not null
+    table.float('avgWeightOz').notNullable()
+    // make a "delicious" of type boolean
+    table.boolean('delicious')
   })
 };
 
