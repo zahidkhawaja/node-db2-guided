@@ -10,8 +10,8 @@ exports.up = function(knex) {
     // make a "delicious" of type boolean
     table.boolean('delicious')
   })
-};
+}
 
 exports.down = function(knex) {
-  
-};
+  return knex.schema.dropTableIfExists('fruit')
+}
